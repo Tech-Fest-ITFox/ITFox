@@ -1,0 +1,9 @@
+
+.icon-word:before { content: '\e800'; } /* '' */
+.icon-ps:before { content: '\e801'; } /* '' */
+.icon-powerpoint:before { content: '\e802'; } /* '' */
+.icon-excel:before { content: '\e803'; } /* '' */
+.icon-cpp:before { content: '\e804'; } /* '' */
+.icon-access:before { content: '\e805'; } /* '' */
+.icon-html:before { content: '\e806'; } /* '' */
+.icon-coreldraw:before { content: '\e807'; } /* '' */
