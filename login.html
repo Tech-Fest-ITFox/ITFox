@@ -20,14 +20,28 @@
 	</header>
 	<div class="landing-content">
 
-		<a class="btn index" href="register.html">Регистрирай се</a>
-		<a class="btn index" href="login.html">Влез</a>
-
+		<div class="small-box login clearfix">
+			<a href="#" class="btn fb">Влез в чрез <b>Facebook</b></a>
+			<h2>или</h2>
+			<form action="/login" method="post" class="clearfix">
+				<div class="input-holder">
+					<input type="email" name="email" class="input" />
+					<div class="placeholder">E-mail</div>
+				</div>
+				<div class="input-holder">					
+					<input type="password" name="password" class="input" />
+					<div class="placeholder">Парола</div>
+				</div>
+				<button type="submit" class="btn">Влез</button>
+			</form>
+			<a href="index.html" class="return">Върни се назад</a>
+		</div>	
+		
 	</div>
 	<footer>
 		<a href="/">ITFox</a> 2015 <br />
 		Всички права запазени  <br />
-		Християн Япраков • Николай Колибаров • Даниел Лидиянов<br />
+		Християн Япраков • Николай Колибаров • Даниел Лудиянов<br />
 		<a href="http://www.yaprakov.com">www.weband.bg</a>
 	</footer>
 	
@@ -41,3 +55,6 @@
 	<script src="js/script.js"></script>
 </body>
 </html>
+
+
+

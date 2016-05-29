@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>ITFox</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="libs/ripple/jquery.materialripple.css">
+	<link rel="stylesheet" href="fonts/roboto/stylesheet.css"> <!-- fonts -->
+	<link rel="stylesheet" href="fonts/roboto-slab/stylesheet.css"> <!-- fonts -->
+	<link rel="stylesheet" href="fonts/icons/stroke.css"> <!-- fonts -->
+	<link rel="stylesheet" href="fonts/categories/css/categories.css"> <!-- fonts -->
+
+</head>
+<body id="landing">
+	<header> 
+		<a class="logo">ITFox</a>
+	</header>
+	<div class="landing-content">
+
+		<div class="small-box reg clearfix">
+			<a href="#" class="btn fb">Регистрирай се чрез <b>Facebook</b></a>
+			<h2>или</h2>
+			<div class="levels two">
+				<div class="level-bar"><div class="level-bar-progress first"></div></div>
+				<ul class="level-labels">
+					<li class="activated">бърза регистрация</li>
+					<li>допълнителни данни</li>
+				</ul>
+			</div>
+			<form class="clearfix">
+				<div class="input-holder">
+					<input type="email" name="email" class="input" ng-class="{ 'error' : regForm.email.$invalid && (regForm.email.$touched || regForm.email.$dirty) }" ng-model="email" required />
+					<div class="placeholder">E-mail</div>
+					<div class="err" ng-show="regForm.email.$invalid">Въведи валиден e-mail</div>
+				</div>
+				<div class="input-holder">
+					<input type="text" name="name" class="input" ng-model="name" ng-class="{ 'error' : regForm.name.$invalid && (regForm.name.$touched || regForm.name.$dirty)  }" required />
+					<div class="placeholder">Име Фамилия</div>
+					<div class="err" ng-show="regForm.name.$invalid">Въведи име</div>
+				</div>
+				<div class="input-holder">					
+					<input type="password" name="password" class="input" ng-class="{ 'error' : (regForm.password.$invalid || regForm.password.$error.minlength) && (regForm.password.$touched || regForm.password.$dirty) }" ng-model="password" ng-minlength="6" required />
+					<div class="placeholder">Парола</div>
+					<div class="err" ng-show="regForm.password.$error.minlength">Твърде кратка парола - трябва да е над 6 символа</div>
+				</div>
+				<div class="input-holder">					
+					<input type="password" name="password2" class="input" ng-class="{ 'error' : (regForm.password2.$invalid || regForm.password2.$error.passwordVerify) && (regForm.password2.$touched || regForm.password2.$dirty) }" ng-model="password2" ng-minlength="6" password-verify="password" required />
+					<div class="placeholder">Повтори парола</div>
+					<div class="err" ng-show="regForm.password2.$error.passwordVerify">Паролите не съвпадат</div>
+				</div>
+				<button type="submit" class="btn" ng-class="{ 'disabled' : regForm.$invalid }" ng-disabled="regForm.$invalid">Регистрирай се веднага</button>
+				<a href="#" class="assist-link fright nmr">или попълни и други данни</a>
+			</form>
+			<a href="index.html" class="return">Върни се назад</a>
+		</div>	
+		
+	</div>
+	<footer>
+		<a href="/">ITFox</a> 2015 <br />
+		Всички права запазени  <br />
+		Християн Япраков • Николай Колибаров • Даниел Лудиянов<br />
+		<a href="http://www.yaprakov.com">www.weband.bg</a>
+	</footer>
+	
+
+
+	<!-- CUSTOM JS -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="libs/ripple/jquery.materialripple.js"></script>
+	<script src="libs/crspline/jquery.crspline.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

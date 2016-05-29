@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>ITFox</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="libs/ripple/jquery.materialripple.css">
+	<link rel="stylesheet" href="fonts/roboto/stylesheet.css"> <!-- fonts -->
+	<link rel="stylesheet" href="fonts/roboto-slab/stylesheet.css"> <!-- fonts -->
+	<link rel="stylesheet" href="fonts/icons/stroke.css"> <!-- fonts -->
+	<link rel="stylesheet" href="fonts/categories/css/categories.css"> <!-- fonts -->
+
+</head>
+<body ng-app="ITFox" ng-controller="MainController">
+	<div class="side-bar">
+		<div class="side-bar-trigger"><div class="flaticon stroke W12 trig-icon"></div></div>
+		<div class="side-bar-content">
+		<!--      HEADER     -->
+		<header> 
+			<a href="/" class="logo">ITFox</a>
+		</header>
+		
+		<!--       MENU       --> 
+		<nav>
+			<ul class="navigation-holder">
+				<li class="nav-groups">
+					<ul class="side-nav">
+						<li class="side-nav-items"><a href="home.html" class="side-nav-link">Начало</a></li>
+						<li class="side-nav-items"><a href="lessons.html" class="side-nav-link">Уроци</a></li>
+						<li class="side-nav-items"><a href="exercises.html" class="side-nav-link">Задачи</a></li>
+					</ul>
+				</li>
+				<!--
+				<li class="nav-border"></li>
+				<li class="nav-groups">
+					<ul class="side-nav">
+						<li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи файл</a></li>
+						<li class="side-nav-items"><a href="#" class="side-nav-link">Качени файлове</a></li>
+						<li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи урок</a></li>
+						<li class="side-nav-items"><a href="#" class="side-nav-link">Качени уроци</a></li>
+						<li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи тест</a></li>
+						<li class="side-nav-items"><a href="#" class="side-nav-link">Качени тестове</a></li>
+					</ul>
+				</li>
+				-->
+				<li class="nav-border"></li>
+				<li class="nav-groups">
+					<ul class="side-nav">
+						<li class="side-nav-items"><a href="files.html" class="side-nav-link">Файлове</a></li>
+						<li class="side-nav-items"><a href="groups.html" class="side-nav-link">Групи</a></li>
+					</ul>
+				</li>
+				<li class="nav-border"></li>
+				<li class="nav-groups">
+					<ul class="side-nav">
+						<li class="side-nav-items"><a href="about.html" class="side-nav-link">Относно</a></li>
+						<li class="side-nav-items"><a href="contacts.html" class="side-nav-link">Контакти</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+		<!--    FOOTER     -->
+		<footer>
+			<a href="/">ITFox</a> 2015 <br />
+			Всички права запазени  <br />
+			Християн Япраков  <br />
+			<a href="http://www.yaprakov.com">www.yaprakov.com</a>
+		</footer>
+		</div>
+	</div>
+
+	<div class="top-section">	
+		<!--       USER SECTION       -->
+		<div class="user-section signed clearfix">
+			<div class="notification-trigger fleft"></div>
+			<div class="user-info fleft">
+				<div class="avatar-holder fleft">
+					<img src="images/avatar.jpg" class="avatar" alt="">
+				</div>
+				<div class="user-name fleft">
+					Християн Япраков <span class="flaticon stroke down-1"></span>
+				</div>
+			</div>
+			<div class="flaticon stroke logout fright"></div>
+			<!--      USER PANEL     -->
+			<div class="user-panel inactive">
+				
+			</div>
+
+		</div>
+
+		<!--       SEARCH BAR       -->
+		<div class="search-bar">
+			<input class="search-input" type="text" placeholder="Търси теми в сайта...">
+		</div>
+
+		<!--       CATEGORIES       -->
+		<ul class="categories minn clearfix">
+			<li class="word"><a href="#" title="MS Word"><span class="catg-icon icon-word"></span><span class="catg-title">MS Word</span></a></li>
+			<li class="powerpoint"><a href="#" title="MS Powerpoint"><span class="catg-icon icon-powerpoint"></span><span class="catg-title catg-title-powerpoint"><span class="adobe">MS </span>Powerpoint</span></a></li>
+			<li class="excel"><a href="#" title="MS Excel"><span class="catg-icon icon-excel"></span><span class="catg-title">MS Excel</span></a></li>
+			<li class="access"><a href="#" title="MS Access"><span class="catg-icon icon-access"></span><span class="catg-title">MS Access</span></a></li>
+			<li class="coreldraw"><a href="#" title="Coreldraw"><span class="catg-icon icon-coreldraw"></span><span class="catg-title">Coreldraw</span></a></li>
+			<li class="html"><a href="#" title="HTML"><span class="catg-icon icon-html"></span><span class="catg-title">HTML</span></a></li>
+			<li class="ps"><a href="#" title="Adobe Photoshop"><span class="catg-icon icon-ps"></span><span class="catg-title catg-title-ps"><span class="adobe">Adobe </span>Photoshop</span></a></li>
+			<li class="cpp"><a href="#" title="C++"><span class="catg-icon icon-cpp"></span><span class="catg-title catg-title-cpp">C++</span></a></li>
+			<li class="more"><a href="#" title="More"><span class="catg-icon icon-more"></span><span class="catg-title catg-title-more">Други<span></a></li>
+		</ul>
+	</div>
+	
+	<!--       CONTENT       -->
+	<div class="content">
+		
+		
+
+	</div>
+
+	<!--       DIALOGS      -->
+	<div class="dialogs-holder">
+		<div class="dialog {{dialog.name}}">
+			<div class="dialog-header clearfix">
+				<a class="flaticon stroke maximize-4" href="/"></a>
+				<div class="dialog-title"><span class="gray-bckg">{{dialog.title}}</span></div>
+				<div class="flaticon stroke x-1"></div>
+			</div>
+			<div class="dialog-content clearfix" ng-include="dialog.url"></div>
+		</div>
+	</div>
+
+
+	<!-- ANGULAR JS -->
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-route/angular-route.min.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/modules/formValidation.js"></script>
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+
+	<!-- CUSTOM JS -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="libs/ripple/jquery.materialripple.js"></script>
+	<script src="libs/crspline/jquery.crspline.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,1 +1,0 @@
-angular.module('ITFox', ['ngRoute', 'appRoutes', 'MainCtrl', 'formVal']);
