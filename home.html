@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="fonts/roboto-slab/stylesheet.css"> <!-- fonts -->
 	<link rel="stylesheet" href="fonts/icons/stroke.css"> <!-- fonts -->
 	<link rel="stylesheet" href="fonts/categories/css/categories.css"> <!-- fonts -->
+	<link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.css"> <!-- fonts -->
 
 </head>
 <body ng-app="ITFox" ng-controller="MainController">
@@ -75,7 +76,7 @@
 
 	<div class="top-section">	
 		<!--       USER SECTION       -->
-		<div class="user-section signed clearfix">
+		<div class="user-section signed clearfix active-panel gray-bckg">
 			<div class="notification-trigger fleft"></div>
 			<div class="user-info fleft">
 				<div class="avatar-holder fleft">
@@ -87,11 +88,77 @@
 			</div>
 			<div class="flaticon stroke logout fright"></div>
 			<!--      USER PANEL     -->
-			<div class="user-panel inactive">
-				
+			<article class="user-panel active">
+				<section class="profile clearfix">
+					<h4>Профилни Данни</h4>
+					<div class="avatar-holder big fleft">
+						<img src="images/avatar.jpg" class="avatar" alt="">
+					</div>
+					<div class="fleft">
+						<p>
+							Ученик от <a href="#">XI A</a> клас <br>
+							в ПМГ “акад. С. П. Корольов” <br>
+							град Благоеваград <br>
+							e-mail: <a href="#">hristiyan@yaprakov.com</a>
+						</p>
+						<a href="#" class="btn">Промени</a>
+					</div>
+				</section>
+				<section class="profile-info-files">
+					<h4>Файлове</h4>
+					<ul class="files-listing">
+						<li class="clearfix">
+							<a href="#" class="clearfix">
+								<div class="file-name"><i class="fa fa-file-text-o"></i> name.accdb</div>
+								<div class="file-size">1MB</div>
+								<div class="file-date">08.08.2016</div>
+							</a>
+						</li>
+						<li class="clearfix">
+							<a href="#" class="clearfix">
+								<div class="file-name"><i class="fa fa-file-code-o"></i> name.html</div>
+								<div class="file-size">100KB</div>
+								<div class="file-date">08.08.2016</div>
+							</a>
+						</li>
+						<li class="clearfix">
+							<a href="#" class="clearfix">
+								<div class="file-name"><i class="fa fa-file-image-o"></i> name.jpeg</div>
+								<div class="file-size">15MB</div>
+								<div class="file-date">08.02.2016</div>
+							</a>
+						</li>
+					</ul>
+					<div class="btn-group">
+						<a href="#" class="btn">Качи нов файл</a>
+						<a href="#" class="btn-company">Всички качени (23)</a>
+					</div>
+					
+			<div class="clearfix"></div>
+				</section>
+				<section class="groups">
+					<h4>Групи и Потребители</h4>
+					<table style="width: 100%;">
+						<tr>
+							<td>XI A</td>
+							<td>Николай и 14 други</td>
+							<td>КЛАС</td>
+						</tr>
+						<tr>
+							<td>XI ПМГ</td>
+							<td>Виктор и 14 други</td>
+							<td>ВИПУСК</td>
+						</tr>
+						<tr>
+							<td>ПМГ</td>
+							<td>197 ученици</td>
+							<td>УЧИЛИЩЕ</td>
+						</tr>
+					</table>
+				</section>
 			</div>
 
-		</div>
+		</article>
 
 		<!--       SEARCH BAR       -->
 		<div class="search-bar">
