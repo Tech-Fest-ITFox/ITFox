@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="fonts/roboto-slab/stylesheet.css"> <!-- fonts -->
 	<link rel="stylesheet" href="fonts/icons/stroke.css"> <!-- fonts -->
 	<link rel="stylesheet" href="fonts/categories/css/categories.css"> <!-- fonts -->
-	<link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.css"> <!-- fonts -->
 
 </head>
 <body ng-app="ITFox" ng-controller="MainController">
@@ -21,7 +20,7 @@
 		<div class="side-bar-content">
 		<!--      HEADER     -->
 		<header> 
-			<a href="index.html" class="logo">ITFox</a>
+			<a href="/" class="logo">ITFox</a>
 		</header>
 		
 		<!--       MENU       --> 
@@ -34,19 +33,6 @@
 						<li class="side-nav-items"><a href="exercises.html" class="side-nav-link">Задачи</a></li>
 					</ul>
 				</li>
-				<!--
-				<li class="nav-border"></li>
-				<li class="nav-groups">
-					<ul class="side-nav">
-						<li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи файл</a></li>
-						<li class="side-nav-items"><a href="#" class="side-nav-link">Качени файлове</a></li>
-						<li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи урок</a></li>
-						<li class="side-nav-items"><a href="#" class="side-nav-link">Качени уроци</a></li>
-						<li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи тест</a></li>
-						<li class="side-nav-items"><a href="#" class="side-nav-link">Качени тестове</a></li>
-					</ul>
-				</li>
-				-->
 				<li class="nav-border"></li>
 				<li class="nav-groups">
 					<ul class="side-nav">
@@ -88,7 +74,7 @@
 			</div>
 			<div class="flaticon stroke logout fright"></div>
 			<!--      USER PANEL     -->
-			<article class="user-panel inactive">
+			<div class="user-panel inactive">
 				<section class="profile clearfix">
 					<h4>Профилни Данни</h4>
 					<div class="avatar-holder big fleft">
@@ -157,7 +143,7 @@
 				</section>
 			</div>
 
-		</article>
+		</div>
 
 		<!--       SEARCH BAR       -->
 		<div class="search-bar">
@@ -165,7 +151,7 @@
 		</div>
 
 		<!--       CATEGORIES       -->
-		<ul class="categories minn clearfix">
+		<ul class="categories min clearfix">
 			<li class="word"><a href="#" title="MS Word"><span class="catg-icon icon-word"></span><span class="catg-title">MS Word</span></a></li>
 			<li class="powerpoint"><a href="#" title="MS Powerpoint"><span class="catg-icon icon-powerpoint"></span><span class="catg-title catg-title-powerpoint"><span class="adobe">MS </span>Powerpoint</span></a></li>
 			<li class="excel"><a href="#" title="MS Excel"><span class="catg-icon icon-excel"></span><span class="catg-title">MS Excel</span></a></li>
@@ -180,152 +166,115 @@
 	
 	<!--       CONTENT       -->
 	<div class="content">
-		<ul class="dashboard-user clearfix">
-			<li class="profile clearfix">
-				<h2>Християн Япраков</h2>
-				<div class="avatar-holder bigger fleft">
-					<img src="images/avatar.jpg" class="avatar" alt="">
-				</div>
-				<div class="fleft">
-					<p>
-						Ученик от <a href="#">XI A</a> клас <br>
-						в <a href="#">ПМГ “акад. С. П. Корольов”</a> <br>
-						град Благоеваград <br>
-						e-mail: <a href="#">hristiyan@yaprakov.com</a> <br>
-						учител по ИТ: <a href="#">Спаска Ангелова</a>
-					</p>
-				</div>
-				<a href="#" class="btn">Промени информацията</a>
-			</li>
-			<li class="profile-info-files clearfix">
-				<h2>Моите файлове</h2>
-				<ul class="files-listing clearfix">
-					<li class="clearfix">
-						<a href="#" class="clearfix">
-							<div class="file-name"><i class="fa fa-file-text-o access-color"></i> name.accdb</div>
-							<div class="file-size">1MB</div>
-							<div class="file-date">08.08.2016</div>
-						</a>
-					</li>
-					<li class="clearfix">
-						<a href="#" class="clearfix">
-							<div class="file-name"><i class="fa fa-file-code-o html-color"></i> name.html</div>
-							<div class="file-size">100KB</div>
-							<div class="file-date">08.08.2016</div>
-						</a>
-					</li>
-					<li class="clearfix">
-						<a href="#" class="clearfix">
-							<div class="file-name"><i class="fa fa-file-image-o ps-color"></i> name.jpeg</div>
-							<div class="file-size">15MB</div>
-							<div class="file-date">08.02.2016</div>
-						</a>
-					</li>
-				</ul>
-				<div class="btn-group">
-					<a href="#" class="btn">Качи нов файл</a>
-					<a href="#" class="btn-company">Всички качени (23)</a>
-				</div>
-			</li>
-			<li class="groups">
-				<h2>Групи</h2>
-				<table style="width: 100%;">
-					<tr>
-						<td><a href="#">XI A</a></td>
-						<td><a href="#" class="nostyle">Николай</a> и 14 други</td>
-						<td><span class="legend">КЛАС</span></td>
-					</tr>
-					<tr>
-						<td><a href="#">XI ПМГ</a></td>
-						<td><a href="#" class="nostyle">Виктор</a> и 14 други</td>
-						<td><span class="legend">ВИПУСК</span></td>
-					</tr>
-					<tr>
-						<td><a href="#">ПМГ</a></td>
-						<td>197 ученици</td>
-						<td><span class="legend">УЧИЛИЩЕ</span></td>
-					</tr>
-				</table>
-				<div class="btn-group">
-					<a href="#" class="btn">Създай нова група</a>
-					<a href="#" class="btn-company">Всички групи (7)</a>
-				</div>
-			</li>
-		</ul>
-		<section class="stream">
-			<h2>Поток</h2>
-			<article class="droplet">
-				<h5><a href="#">Спаска Ангелова</a> качи нов <span>урок</span> в раздел <a href="#" class="excel-color">Powerpoint Excel</a>.</h5>
-				<div class="timeago">Преди 4 часа</div>
-				<a href="#" class="droplet-title nostyle">
-					<h3>
-						Обработка на таблични данни в Microsoft Excel. Използване на формули за сортиране на данни.
-					</h3>
-				</a>
-			</article>
-			<article class="droplet">
-				<h5><a href="#">Алекс Мишев</a> качи нов <span class="word-color">файл</span>.</h5>
-				<div class="timeago">Преди 5 часа</div>
-				<a href="#" class="droplet-title dfile clearfix nostyle" title="Прегледай">
-					<div class="file-name"><i class="fa fa-file-word-o word-color"></i> Document1-kursova-rabota.docx</div>
-					<div class="file-size">2.3MB</div>
-					<div class="file-date">08.02.2016</div>
-				</a>
-				<a href="#">СВАЛИ ТОЗИ ФАЙЛ</a>
-			</article>
-			<article class="droplet">
-				<h5><a href="#">Поп Андрей (XII A)</a> качи нов <span class="coreldraw-color">файл</span>.</h5>
-				<div class="timeago">Преди 4 часа</div>
-				<a href="#" class="droplet-title dfile clearfix nostyle" title="Прегледай">
-					<div class="file-name"><i class="fa fa-file-image-o coreldraw-color"></i> domashna02-gazov_balon.svg</div>
-					<div class="file-size">5MB</div>
-					<div class="file-date">20.04.2016</div>
-				</a>
-				<a href="#">СВАЛИ ТОЗИ ФАЙЛ</a>
-			</article>
-			<article class="droplet">
-				<h5>СИСТЕМНО СЪОБЩЕНИЕ</h5>
-				<div class="timeago">Преди 19 часа</div>
-				<p>
-					На 20.04.2016г. от 10:00 до 16:00 сайтът няма да бъде достъпен заради обновления по сървъра.
-				</p>
-			</article>
-			<article class="droplet">
-				<h5>Имате нови <span>съобщения</span> в групата <a href="#">XI B</a></h5>
-				<div class="timeago">Преди 19 часа</div>
-				<p class="chat">
-					... <br>
-					"Аre we balak prati mi zadachata nai nakraq" - <span class="chat-title">Бойчо Огнянов в 13:39</span> <br>
-					"Не мога са" - <span class="chat-title">Стоичко Влаха в 13:40</span> <br>
-					"prati q de ae" - <span class="chat-title">Бойчо Огнянов в 13:41</span> <br>
-					"shte q prepravq v burzinata" - <span class="chat-title">Бойчо Огнянов в 13:41</span> <br>
-					"Стига бе, направи си я сам, елементарна е" - <span class="chat-title">Стоичко Влаха в 13:43</span> <br>
-					"Аз ще ви я дам, небойте се" - <span class="chat-title">Отец Сисой в 13:45</span> <br>
-					domashna.cpp - <span class="chat-title">Отец Сисой в 13:45</span> йл. 
-				</p>
-				<p>
-					<a href="#">43 непрочетени съобщения в XI B</a> 
-				</p>
-				
-			</article>
-			<article class="droplet">
-				<h5>Нов учебен материал</h5>
-				<div class="timeago">Преди 1 ден</div>
-				<p>
-					Качени са нови уроци (5) за ЗП в раздел <a href="#" class="access-color">Powerpoint Access</a>.
-				</p>
-			</article>
-			<article class="droplet">
-				<h5>Нов съученик</h5>
-				<div class="timeago">Преди 2 дни</div>
-				<div class="clearfix">
-					<div class="avatar-holder small fleft">
-						<img src="images/avatar.jpg" class="avatar" alt="">
-					</div>
-					<div class="co-student"><a href="#">Николай Галчев</a> се регистрира като ученик във Вашия клас.</div>
-				</div>
-			</article>
+		<h1>Уроци по ИТ и Информатика</h1>
+		<section class="lesson-class clearfix">
+			<h2>5 клас</h2>
+			<ul>
+				<li><a href="#" class="others-color">Компютърни система и ИТ</a></li>
+				<li><a href="#" class="others-color">Работа със звукова и видео информация</a></li>
+				<li><a href="#" class="powerpoint-color">Компютърна презентация</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="others-color">Организация на данните и носители на информация</a></li>
+				<li><a href="#" class="word-color">Компютърна обработка на текстове</a></li>
+				<li><a href="#" class="html-color">Интернет</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="ps-color">Създаване и обработка на графично изображение</a></li>
+				<li><a href="#" class="coreldraw-color">Електронни таблици</a></li>
+			</ul>
 		</section>
+		<section class="lesson-class clearfix">
+			<h2>6 клас</h2>
+			<ul>
+				<li><a href="#" class="others-color">Операционна система и носители на информация</a></li>
+				<li><a href="#" class="coreldraw-color">Електронни таблици</a></li>
+				<li><a href="#" class="others-color">Интегриране на дейности</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="word-color">Компютърна обработка на текстове</a></li>
+				<li><a href="#" class="powerpoint-color">Компютърна презентация</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="ps-color">Работа с графични изображения</a></li>
+				<li><a href="#" class="html-color">Интернет</a></li>
+			</ul>
+		</section>
+		<section class="lesson-class clearfix">
+			<h2>7 клас</h2>
+			<ul>
+				<li><a href="#" class="others-color">Компютърна система</a></li>
+				<li><a href="#" class="word-color">Компютърна текстообработка</a></li>
+				<li><a href="#" class="others-color">Работа по проект</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="others-color">Защита на данните в компютърната система</a></li>
+				<li><a href="#" class="powerpoint-color">Компютърна презентация</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="excel-color">Електронни таблици</a></li>
+				<li><a href="#" class="html-color">Интернет</a></li>
+			</ul>
+		</section>
+		<section class="lesson-class clearfix">
+			<h2>8 клас</h2>
+			<ul>
+				<li><a href="#" class="others-color">Архивиране на данни</a></li>
+				<li><a href="#" class="others-color">Компютърни мрежи</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="others-color">Компютърни системи</a></li>
+				<li><a href="#" class="html-color">Създаване и публикуване на интернет страници</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="others-color">Операционна система</a></li>
+				<li><a href="#" class="others-color">Работа по проекти</a></li>
+			</ul>
+		</section>
+		<section class="lesson-class clearfix">
+			<h2>9 клас</h2>
+			<ul>
+				<li><a href="#" class="others-color">Информационни технологии и компютърни системи</a></li>
+				<li><a href="#" class="excel-color">Електронни таблици</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="word-color">Текстообработка</a></li>
+				<li><a href="#" class="others-color">Интегриране</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="ps-color">Компютърна графика</a></li>
+			</ul>
+		</section>
+		<section class="lesson-class clearfix">
+			<h2>10 клас</h2>
+			<ul>
+				<li><a href="#" class="access-color">Бази от данни</a></li>
+				<li><a href="#" class="others-color">Интегриране на дейности</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="powerpoint-color">Компютърна презентация</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="others-color">Компютърни мрежи </a></li>
+			</ul>
+		</section>
+		<section class="lesson-class clearfix">
+			<h2>Информатика</h2>
+			<ul>
+				<li><a href="#" class="others-color">Увод в информатиката</a></li>
+				<li><a href="#" class="others-color">Алгоритми</a></li>
+				<li><a href="#" class="others-color">Структури данни</a></li>
+				<li><a href="#" class="others-color">Програмиране</a></li>
+				<li><a href="#" class="others-color">DOS</a></li>
+			</ul>
+			<ul>
+				<li class="cpp-color">C++</a></li>
+			</ul>
+			<ul>
+				<li><a href="#" class="others-color">C#</a></li>
+			</ul>
+		</section>
+		
 
 	</div>
 

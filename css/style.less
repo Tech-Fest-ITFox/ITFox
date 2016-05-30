@@ -24,6 +24,8 @@
 @html: #f16529;
 @htmld: #cc5523;
 
+@other-text: #6d736f;
+
 .box-sizing {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -64,6 +66,48 @@ h1 {
 	font-family: 'Roboto Slab';
 	font-weight: 300;
 	font-size: 40px;
+	margin: 30px 0 50px 0;
+}
+h2 {
+	font-family: 'Roboto Slab';
+	font-weight: 300;
+	font-size: 32px;
+}
+h3 {
+	font-family: 'Roboto Slab';
+	font-weight: 300;
+	font-size: 24px;
+}
+h5 {
+	font-size: 18px;
+	font-weight: 300;
+}
+.word-color {
+	color: @word;
+}
+.powerpoint-color {
+	color: @powerpoint;
+}
+.excel-color {
+	color: @excel;
+}
+.access-color {
+	color: @access;
+}
+.coreldraw-color {
+	color: @coreldraw;
+}
+.html-color {
+	color: @html;
+}
+.ps-color {
+	color: @ps;
+}
+.cpp-color {
+	color: @cpp;
+}
+.others-color {
+	color: @other-text;
 }
 .top-section {
 	height: 130px;
@@ -329,6 +373,10 @@ footer {
 		width: 100px;
 		height: 100px;
 	}
+	&.bigger {
+		width: 112px;
+		height: 112px;
+	}
 	.avatar {
 		width: 100%;
 		min-height: 100%;
@@ -373,7 +421,7 @@ footer {
 	padding: 15px 30px;
 
 	&.active {
-		height: 640px;
+		height: 660px;
 	}
 	section {
 		margin-bottom: 40px;
@@ -392,6 +440,7 @@ footer {
 	padding: 0;
 	list-style: none;
 	li {
+		width: 100% !important;
 		border-bottom: 1px solid #191b1a;
 		&:last-child {
 			border: none;
@@ -650,6 +699,170 @@ i.fa {
 }
 /* **** CONTENT **** */
 
+.dashboard-user {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	.avatar-holder {
+		margin: 10px 20px 0 0;
+		position: static;
+	}
+	.profile p {
+		font-size: 14px;
+		line-height: 25px;
+		margin: 0;
+		margin-bottom: 20px;
+		a {
+			overflow: hidden;
+		}
+	}
+	table {
+		line-height: 30px;
+		padding-bottom: 37px;
+	}
+	li {
+		width: 33.3333333%;
+		padding: 0 15px;
+		float: left;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+		.files-listing {
+			margin-bottom: 19px !important;
+			li {
+				border: none;
+				padding: 0;
+				a {
+					color: inherit;
+					font-weight: 400;
+					&:hover {
+						background: @grayd;
+					}
+				}
+				i {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+.stream {
+	margin: 50px 0;
+}
+.droplet {
+	display: block;
+	margin: 30px 0;
+	padding: 28px;
+	box-shadow: 0 5px 0 0 @grayd;
+	background: @white;
+	transition: all .2s;
+	border: 2px solid @white;
+	&:hover {
+		border: 2px solid @orange;
+	}
+	h5 {
+		margin: 0;
+		a, span {
+			font-weight: 400;
+		}
+	}
+	.timeago {
+		text-transform: uppercase;
+		font-size: 12px;
+		margin: 15px 0;
+	}
+	h3 {
+		margin: 0;
+		line-height: 26px;
+	}
+	.droplet-title {
+		display: block;
+		transition: all .2s;
+		&:hover {
+			color: @orange;
+			text-decoration: none;
+		}
+		&.dfile {
+			padding: 10px 0;
+			font-size: 20px;
+			line-height: 26px;
+			margin-bottom: 15px;
+			&:hover {
+				color: inherit;
+				background: @whited;
+			}
+
+			.file-name {
+				font-family: 'Courier New';
+				float: left;
+				i {
+					font-size: 24px;
+				}
+			}
+			.file-date {
+				float: right;
+				font-size: 16px;
+			}
+			.file-size {
+				float: right;
+				font-size: 16px;
+				width: 60px;
+				text-align: right;
+			}
+		}
+	}
+	p {
+		margin: 0;
+		&.chat {
+			font-size: 16px;
+		}
+		.chat-title {
+			font-weight: 300;
+		}
+	}
+	.co-student {
+		float: left;
+		padding-left: 5px;
+		line-height: 56px;	
+		font-size: 18px;
+	}
+}
+
+.content {
+	.lesson-class {
+		h2 {
+			margin: 30px 0 20px 0;
+		}
+		ul {
+			width: 33.3%;
+			float: left;
+			font-family: 'Roboto Slab';
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				margin: 20px 0;
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+.legend {
+	font-size: 14px;
+	color: #808080;
+}
+.nostyle {
+	color: inherit;
+	font-size: inherit;
+	background: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+}
 
 /* **** OTHER **** */
 .btn {
@@ -727,6 +940,42 @@ i.fa {
 		float: right;
 		padding-right: 20px;
 	}
+}
+.air-5 {
+	margin: 5px;
+}
+.air-10 {
+	margin: 10px;
+}
+.air-15 {
+	margin: 15px;
+}
+.air-20 {
+	margin: 20px;
+}
+.air-30 {
+	margin: 30px;
+}
+.air-5-0 {
+	margin: 5px 0;
+}
+.air-10-0 {
+	margin: 10px 0;
+}
+.air-15-0 {
+	margin: 15px 0;
+}
+.air-20-0 {
+	margin: 20px 0;
+}
+.air-30-0 {
+	margin: 30px 0;
+}
+.db {
+	display: block !important;
+}
+.tac {
+	text-align: center;
 }
 .nmr {
 	margin-right: 0 !important;
