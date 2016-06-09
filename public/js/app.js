@@ -1,4 +1,4 @@
-angular.module('ITFox', ['ngRoute', 'appRoutes', 'ngStorage', 'Controllers', 'Services', 'formVal', 'textAngular'])
+angular.module('ITFox', ['ngRoute', 'appRoutes', 'ngStorage', 'Controllers', 'Services', 'ControllersDani', 'ServicesDani', 'formVal', 'textAngular'])
 .run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
     var original = $location.path;
     $location.path = function (path, reload) {

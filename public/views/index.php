@@ -8,6 +8,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+  <link rel="stylesheet" href="css/styleDani.css"><!-- custom style -->
     <link rel="stylesheet" href="libs/ripple/jquery.materialripple.css">
 	<link rel="stylesheet" href="fonts/roboto/stylesheet.css"> <!-- fonts -->
 	<link rel="stylesheet" href="fonts/roboto-slab/stylesheet.css"> <!-- fonts -->
@@ -240,9 +241,11 @@
 
 	<!-- ANGULAR CUSTOM -->
 	<script src="js/modules/formValidation.js"></script>
-	<script src="js/services.js"></script>
-	<script src="js/controllers.js"></script>
-	<script src="js/appRoutes.js"></script>
+  <script src="js/services.js"></script>
+	<script src="js/servicesDani.js"></script>
+  <script src="js/controllers.js"></script>
+	<script src="js/controllersDani.js"></script>
+  <script src="js/appRoutes.js"></script>
 	<script src="js/app.js"></script>
 
 	<!-- CUSTOM JS -->
