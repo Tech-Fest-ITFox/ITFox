@@ -1,0 +1,93 @@
+<div class="small-box clearfix" ng-controller="RegCtrl">
+    <a href="#" class="btn fb">Регистрирай се чрез <b>Facebook</b></a>
+    <h2>{{ userrr }}</h2>
+    <form role="form" ng-submit="register()" class="clearfix">
+
+        <div class="input-holder" ng-init="isFocused = false">
+            <input type="email" name="email" ng-model="email" class="input" ng-class="{true:'focus',false:'blur'}[isFocused]" ng-focus="isFocused=true" ng-blur="isFocused=false"/>
+
+            <div class="placeholder active" id="email" ng-hide="isFocused">E-mail</div>
+            <div class="err">Въведи валиден e-mail</div>
+        </div>
+        <div class="input-holder">
+            <input type="text" name="name" ng-model="name" class="input" ng- required/>
+
+            <div class="placeholder active">Име Фамилия</div>
+            <div class="err">Въведи име</div>
+        </div>
+        <div class="input-holder">
+            <label style="color: #fff;" for="student">Ученик</label>
+            <input type="radio" id="student" name="role" value="Student">
+            <label style="color: #fff;" for="teacher">Учител</label>
+            <input type="radio" id="teacher" name="role" value="Teacher">
+        </div>
+        <div class="input-holder">
+            <input type="password" name="password" ng-model="password" class="input" required/>
+
+            <div class="placeholder active">Парола</div>
+            <div class="err">Твърде кратка парола - трябва да е над 6 символа</div>
+            <!-- @if ($errors->has('password'))
+                <span class="help-block">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+            @endif -->
+        </div>
+        <div class="input-holder">
+            <input type="password" name="password_confirmation" class="input"/>
+
+            <div class="placeholder active">Повтори парола</div>
+            <div class="err">Паролите не съвпадат</div>
+            <!-- @if ($errors->has('password_confirmation'))
+                <span class="help-block">
+                                    <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                </span>
+            @endif -->
+        </div>
+        <div class="input-holder">
+            <input type="text" name="city" class="input" />
+
+            <div class="placeholder active">Град</div>
+            <div class="err">Въведи град</div>
+            <!-- @if ($errors->has('city'))
+                <span class="help-block">
+                                    <strong>{{ $errors->first('city') }}</strong>
+                                </span>
+            @endif -->
+        </div>
+        <div class="input-holder">
+            <input type="text" name="school" class="input" />
+
+            <div class="placeholder active">Училище</div>
+            <div class="err">Въведи училище</div>
+           <!--  @if ($errors->has('school'))
+                <span class="help-block">
+                                    <strong>{{ $errors->first('school') }}</strong>
+                                </span>
+            @endif -->
+        </div>
+        <div class="input-holder">
+            <input type="number" name="grade" class="input" />
+
+            <div class="placeholder active">Клас</div>
+            <div class="err">Въведи клас</div>
+            <!-- @if ($errors->has('grade'))
+                <span class="help-block">
+                                    <strong>{{ $errors->first('grade') }}</strong>
+                                </span>
+            @endif -->
+        </div>
+        <div class="input-holder">
+            <input type="text" name="class" class="input" />
+
+            <div class="placeholder active">Паралелка</div>
+            <div class="err">Въведи паралелка</div>
+            <!-- @if ($errors->has('class'))
+                <span class="help-block">
+                                    <strong>{{ $errors->first('class') }}</strong>
+                                </span>
+            @endif -->
+        </div>
+        <button type="submit" class="btn">Регистрирай се веднага</button>
+    </form>
+    <a href="/" class="return db">Върни се назад</a>
+</div>
