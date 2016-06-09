@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Message');
     }
 
+    public function files()
+    {
+        return $this->hasMany('App\File');
+    }
+
     public function hasAnyRole($roles)
     {
         if (is_array($roles)) {
