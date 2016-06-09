@@ -9,6 +9,7 @@
 html,
 body {
   min-height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
@@ -34,7 +35,6 @@ a.assist-link,
 }
 p {
   display: block;
-  margin-bottom: 40px;
   font-size: 18px;
   line-height: 1.7;
 }
@@ -93,6 +93,7 @@ h5 {
   position: fixed;
   right: 0;
   left: 200px;
+  z-index: 300;
   transition: left 0.5s;
   -moz-transition: left 0.5s;
   -o-transition: left 0.5s;
@@ -798,6 +799,10 @@ i.fa {
   line-height: 56px;
   font-size: 18px;
 }
+.content {
+  position: relative;
+  z-index: 5;
+}
 .content .lesson-class h2 {
   margin: 30px 0 20px 0;
 }
@@ -1014,6 +1019,137 @@ i.fa {
   color: #a13638;
   transition: all .3s;
 }
+.radios-holder {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.radios-holder .radio-holder {
+  width: 11.1111111%;
+  float: left;
+  display: block;
+}
+.radios-holder .radio-holder input {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.radios-holder .radio-holder input:checked + .btn {
+  margin-top: 5px !important;
+  margin-bottom: -5px !important;
+  text-decoration: none;
+  box-shadow: none !important;
+}
+.radios-holder .radio-holder .btn {
+  width: 100%;
+  border-radius: 0;
+  text-align: center;
+  position: relative;
+  padding: 5px 0;
+}
+.radios-holder .radio-holder .btn .catg-icon {
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  font-size: 28px;
+  height: auto;
+}
+.radios-holder .radio-holder .btn.word {
+  background: #2b5797;
+  box-shadow: 0 5px 0 0 #1c3863;
+}
+.radios-holder .radio-holder .btn.word:hover {
+  box-shadow: 0 7px 0 0 #1c3863;
+}
+.radios-holder .radio-holder .btn.word .catg-icon {
+  background: #2b5797;
+}
+.radios-holder .radio-holder .btn.powerpoint {
+  background: #d24726;
+  box-shadow: 0 5px 0 0 #9e361c;
+}
+.radios-holder .radio-holder .btn.powerpoint:hover {
+  box-shadow: 0 7px 0 0 #9e361c;
+}
+.radios-holder .radio-holder .btn.powerpoint .catg-icon {
+  background: #d24726;
+}
+.radios-holder .radio-holder .btn.excel {
+  background: #217346;
+  box-shadow: 0 5px 0 0 #164d2f;
+}
+.radios-holder .radio-holder .btn.excel:hover {
+  box-shadow: 0 7px 0 0 #164d2f;
+}
+.radios-holder .radio-holder .btn.excel .catg-icon {
+  background: #217346;
+}
+.radios-holder .radio-holder .btn.access {
+  background: #a13638;
+  box-shadow: 0 5px 0 0 #732728;
+}
+.radios-holder .radio-holder .btn.access:hover {
+  box-shadow: 0 7px 0 0 #732728;
+}
+.radios-holder .radio-holder .btn.access .catg-icon {
+  background: #a13638;
+}
+.radios-holder .radio-holder .btn.coreldraw {
+  background: #61a706;
+  box-shadow: 0 5px 0 0 #4a8005;
+}
+.radios-holder .radio-holder .btn.coreldraw:hover {
+  box-shadow: 0 7px 0 0 #4a8005;
+}
+.radios-holder .radio-holder .btn.coreldraw .catg-icon {
+  background: #61a706;
+}
+.radios-holder .radio-holder .btn.ps {
+  background: #34495e;
+  box-shadow: 0 5px 0 0 #233140;
+}
+.radios-holder .radio-holder .btn.ps:hover {
+  box-shadow: 0 7px 0 0 #233140;
+}
+.radios-holder .radio-holder .btn.ps .catg-icon {
+  background: #34495e;
+}
+.radios-holder .radio-holder .btn.cpp {
+  background: #659ad2;
+  box-shadow: 0 5px 0 0 #5079a6;
+}
+.radios-holder .radio-holder .btn.cpp:hover {
+  box-shadow: 0 7px 0 0 #5079a6;
+}
+.radios-holder .radio-holder .btn.cpp .catg-icon {
+  background: #659ad2;
+}
+.radios-holder .radio-holder .btn.html {
+  background: #f16529;
+  box-shadow: 0 5px 0 0 #cc5523;
+}
+.radios-holder .radio-holder .btn.html:hover {
+  box-shadow: 0 7px 0 0 #cc5523;
+}
+.radios-holder .radio-holder .btn.html .catg-icon {
+  background: #f16529;
+}
+.radios-holder .radio-holder .btn.more {
+  background: #6d7370;
+  box-shadow: 0 5px 0 0 #575c59;
+}
+.radios-holder .radio-holder .btn.more:hover {
+  box-shadow: 0 7px 0 0 #575c59;
+}
+.radios-holder .radio-holder .btn.more .catg-icon {
+  background: #6d7370;
+}
+.radios-holder .radio-holder .btn.more .catg-icon:before {
+  content: "•••";
+  letter-spacing: 2px;
+}
 .levels.two .first,
 .levels.two li {
   width: 49%;
@@ -1221,9 +1357,17 @@ a.return {
 .ng-cloak {
   display: none !important;
 }
+.ta-hidden-input {
+  display: none;
+}
 .landing {
   background: #2a2c2b;
   padding-top: 100px;
+  min-height: 100%;
+  height: auto !important;
+  /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -100px;
 }
 .landing .logo {
   margin: 0;
@@ -1231,6 +1375,13 @@ a.return {
 .landing .logo:hover {
   text-decoration: none;
   cursor: auto;
+}
+.landing .reg-info {
+  width: 300px;
+  margin: 0 auto;
+}
+.landing .reg-info .btn {
+  margin-right: 10px;
 }
 .landing .landing-content {
   width: 100%;
@@ -1249,31 +1400,48 @@ a.return {
   margin: 0 auto;
 }
 .landing footer {
+  height: 100px;
   position: static;
   padding-bottom: 10px;
+}
+.footer,
+.push {
+  height: 155px;
+  /* .push must be the same height as .footer */
 }
 .text-angular {
   position: relative;
   z-index: 5;
   margin: 50px 0;
-  background: #e6e5e4;
+  border: none;
 }
 .text-angular .btn-group {
   display: inline-block;
   margin-right: 5px;
   clear: both;
-  overflow: hidden;
 }
 .text-angular .btn-group .btn {
   margin: 0;
-  padding: 8px 15px;
-  float: left;
-  border-radius: 0;
   background: none;
-  border-right: 1px solid #ccc;
+  border: 1px solid #2a2c2b;
+  border-left: none;
+  border-radius: 0;
+  padding: 10px 20px;
+  display: block;
+  box-shadow: none;
+  color: #2a2c2b !important;
+  transition: background .3s;
+}
+.text-angular .btn-group .btn:first-child {
+  border-left: 1px solid #2a2c2b;
+  border-radius: 3px 0 0 3px;
+}
+.text-angular .btn-group .btn:last-child {
+  border-radius: 0 3px 3px 0;
 }
 .text-angular .btn-group .btn:hover {
-  background: #1a1a1a;
+  margin: 0 !important;
+  background: #d9d8d7;
 }
 .text-angular .btn-group .btn.active {
   background: #ee7326;
@@ -1291,46 +1459,32 @@ a.return {
 .text-angular .btn-group .btn[disabled]:hover {
   background: none;
 }
+.text-angular .btn-group #toolbarWC,
+.text-angular .btn-group #toolbarCC {
+  padding: 8px 20px;
+}
+.text-angular i.fa {
+  font-size: 14px;
+}
 .text-angular .ta-scroll-window div[id] {
-  position: relative;
-  z-index: 5;
-  display: block;
-  margin: 20px 0;
-  padding: 10px 0;
-  border: none;
-  border-bottom: 2px solid #f6f5f4;
-  font-size: 16px;
-  color: #f6f5f4;
-  background: none;
-  transition: border .4s;
+  padding: 0 10px;
   width: 100%;
   overflow-y: auto;
-  height: 500px;
+  min-height: 500px;
+  max-height: 1000px;
   margin-top: 15px;
   color: #2a2c2b;
+  background: #dedddc;
+  transition: all .2s;
+  border: 1px solid #dedddc;
 }
-.text-angular .ta-scroll-window div[id]:active {
-  outline: none;
+.text-angular .ta-scroll-window div[id]:hover {
+  background: #d9d8d7;
 }
 .text-angular .ta-scroll-window div[id]:focus {
+  background: #e0dfde;
   outline: none;
-  border-bottom: 2px solid #ee7326;
-}
-.text-angular .ta-scroll-window div[id]:hover + .placeholder {
-  margin-left: 10px;
-}
-.text-angular .ta-scroll-window div[id]:focus + .placeholder {
-  left: auto;
-  right: 0;
-}
-.text-angular .ta-scroll-window div[id].error {
-  border-color: #a13638;
-}
-.text-angular .ta-scroll-window div[id].error + .placeholder {
-  color: #a13638;
-}
-.text-angular .ta-scroll-window div[id].error ~ .err {
-  padding-top: 0;
+  border: 1px solid #d9d8d7;
 }
 /* **** RESPONSIVE **** */
 @media (min-width: 993px) and (max-width: 1600px) {

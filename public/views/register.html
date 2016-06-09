@@ -17,9 +17,9 @@
         </div>
         <div class="input-holder">
             <label style="color: #fff;" for="student">Ученик</label>
-            <input type="radio" id="student" name="role" value="Student">
+            <input type="radio" id="student" name="role" ng-model="role" value="Student">
             <label style="color: #fff;" for="teacher">Учител</label>
-            <input type="radio" id="teacher" name="role" value="Teacher">
+            <input type="radio" id="teacher" name="role" ng-model="role" value="Teacher">
         </div>
         <div class="input-holder">
             <input type="password" name="password" ng-model="password" class="input" required/>

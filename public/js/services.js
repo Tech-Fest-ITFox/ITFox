@@ -56,8 +56,8 @@ angular.module('Services', [])
                 getToken: function () {
                     return $sessionStorage.foxToken;
                 },
-                uploadImage: function (data, success, error) {
-                    $http.post(baseUrl + '/uploadImage', data).success(success).error(error)
+                addLesson: function (data, success, error) {
+                    $http.post(baseUrl + '/api/lesson', data).success(success).error(error)
                 },
                 updateImage: function (data, success, error) {
                     $http.put(baseUrl + '/api/images/' + data.urlParam, data).success(success).error(error)

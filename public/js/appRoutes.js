@@ -20,15 +20,15 @@ angular.module('appRoutes', ['ngStorage'])
 			templateUrl: 'views/lessons.html',
 			controller: 'MainController'
 		})
-		.when('/lessons/:grade', {
+		.when('/lessons/grade/:grade', {
 			templateUrl: 'views/lessons-grade.html',
 			controller: 'MainController'
 		})
-		.when('/lessons/:category', {
+		.when('/lessons/category/:category', {
 			templateUrl: 'views/lessons-category.html',
 			controller: 'MainController'
 		})
-		.when('/lessons/:id', {
+		.when('/lessons/lesson/:id', {
 			templateUrl: 'views/lesson.html',
 			controller: 'MainController'
 		})
@@ -150,6 +150,10 @@ angular.module('appRoutes', ['ngStorage'])
 		})
 		.when('/contacts', {
 			templateUrl: 'views/contacts.html',
+			controller: 'MainController'
+		})
+		.when('/error', {
+			templateUrl: 'views/error.html',
 			controller: 'MainController'
 		})
 

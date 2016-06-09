@@ -1,13 +1,62 @@
     <h1>Добави урок</h1>
-    <div class="inside clearfix">
-        <form>
+    <div class="inside clearfix" ng-controller="AddLessonCtrl">
+        <form role="form" ng-submit="addLesson()">
+            <h3>Заглавие на урока</h3>
             <div class="input-holder">
-                <input type="text" name="text" class="input active-placeholder" required/>
+                <input type="text" name="text" ng-model="title" class="input active-placeholder" required/>
 
                 <div class="placeholder">Заглавие</div>
                 <div class="err">Въведи заглавие</div>
             </div>
-            <div text-angular class="text-angular" ></div>
+            <h3>Категория на урока</h3>
+            <ul class="radios-holder clearfix">
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="word" value="word" class="input active-placeholder" required/>
+                    <label for="word" class="btn word"><span class="catg-icon icon-word"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="powerpoint" value="powerpoint" class="input active-placeholder" required/>
+                    <label for="powerpoint" class="btn powerpoint"><span class="catg-icon icon-powerpoint"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="excel" value="excel" class="input active-placeholder" required/>
+                    <label for="excel" class="btn excel"><span class="catg-icon icon-excel"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="access" value="access" class="input active-placeholder" required/>
+                    <label for="access" class="btn access"><span class="catg-icon icon-access"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="coreldraw" value="coreldraw" class="input active-placeholder" required/>
+                    <label for="coreldraw" class="btn coreldraw"><span class="catg-icon icon-coreldraw"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="html" value="html" class="input active-placeholder" required/>
+                    <label for="html" class="btn html"><span class="catg-icon icon-html"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="ps" value="ps" class="input active-placeholder" required/>
+                    <label for="ps" class="btn ps"><span class="catg-icon icon-ps"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="cpp" value="cpp" class="input active-placeholder" required/>
+                    <label for="cpp" class="btn cpp"><span class="catg-icon icon-cpp"></span></label>
+                </li>
+                <li class="radio-holder">
+                    <input type="radio" ng-model="category" name="category" id="more" value="more" class="input active-placeholder" required/>
+                    <label for="more" class="btn more"><span class="catg-icon icon-more"></span></label>
+                </li>
+                
+            </ul>
+            <h3>Клас</h3>
+            <div class="input-holder">
+                <input type="number" name="number" ng-model="grade" class="input active-placeholder" required/>
+
+                <div class="placeholder">Клас</div>
+                <div class="err">Въведи заглавие</div>
+            </div>
+            <h3>Съдържание</h3>
+            <div text-angular class="text-angular" ng-model="content"></div>
             <!-- <div text-angular class="text-angular" ta-paste="stripStyle()" ></div> -->
                 
             <button type="submit" class="btn">Качи урок</button>

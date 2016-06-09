@@ -36,6 +36,7 @@
 
 html, body {
 	min-height: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto';
@@ -58,7 +59,6 @@ a, .a {
 }
 p {
 	display: block;
-	margin-bottom: 40px;
 	font-size: 18px;
 	line-height: 1.7;
 }
@@ -117,6 +117,7 @@ h5 {
 	position: fixed;
 		right: 0;
 		left: 200px;
+		z-index: 300;
 	transition: left 0.5s;
 	-moz-transition: left 0.5s;
 	-o-transition: left 0.5s;
@@ -838,6 +839,8 @@ i.fa {
 }
 
 .content {
+	position: relative;
+	z-index: 5;
 	.lesson-class {
 		h2 {
 			margin: 30px 0 20px 0;
@@ -1065,6 +1068,148 @@ i.fa {
 		transition: all .3s;
 	}
 }
+.radios-holder {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	.radio-holder {
+		width: 11.1111111%;
+		float: left;
+		display: block;
+		input {
+			opacity: 0;
+			height: 0;
+			margin: 0;
+			padding: 0;
+		}
+		input:checked + .btn {
+			margin-top: 5px !important;
+		margin-bottom: -5px !important;
+		text-decoration: none;
+		box-shadow: none !important;
+		}
+		.btn {
+			width: 100%;
+			border-radius: 0;
+			text-align: center;
+			position: relative;
+			padding: 5px 0;
+			.catg-icon {
+				padding: 0;
+				text-align: center;
+				margin: 0;
+				position: relative;
+				font-size: 28px;
+				height: auto;
+			}
+			&.word {
+				background: @word;
+				box-shadow: 0 5px 0 0 @wordd;
+				&:hover {
+					box-shadow: 0 7px 0 0 @wordd;
+				}
+				.catg-icon {
+					background: @word;
+				}
+			}
+			&.powerpoint {
+				background: @powerpoint;
+				box-shadow: 0 5px 0 0 @powerpointd;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 @powerpointd;
+				}
+				.catg-icon {
+					background: @powerpoint;
+				}
+			}
+			&.excel {
+				background: @excel;
+				box-shadow: 0 5px 0 0 @exceld;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 @exceld;
+				}
+				.catg-icon {
+					background: @excel;
+				}
+			}
+			&.access {
+				background: @access;
+				box-shadow: 0 5px 0 0 @accessd;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 @accessd;
+				}
+				.catg-icon {
+					background: @access;
+				}
+			}
+			&.coreldraw {
+				background: @coreldraw;
+				box-shadow: 0 5px 0 0 @coreldrawd;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 @coreldrawd;
+				}
+				.catg-icon {
+					background: @coreldraw;
+				}
+			}
+			&.ps {
+				background: @ps;
+				box-shadow: 0 5px 0 0 @psd;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 @psd;
+				}
+				.catg-icon {
+					background: @ps;
+				}
+			}
+			&.cpp {
+				background: @cpp;
+				box-shadow: 0 5px 0 0 @cppd;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 @cppd;
+				}
+				.catg-icon {
+					background: @cpp;
+				}
+			}
+			&.html {
+				background: @html;
+				box-shadow: 0 5px 0 0 @htmld;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 @htmld;
+				}
+				.catg-icon {
+					background: @html;
+				}
+			}
+			&.more {
+				background: #6d7370;
+				box-shadow: 0 5px 0 0 #575c59;
+
+				&:hover {
+					box-shadow: 0 7px 0 0 #575c59;
+				}
+				.catg-icon {
+					background: #6d7370;
+					&:before {
+						content: "•••";
+						letter-spacing: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 .levels {
 	&.two {
 		.first, li {
@@ -1279,15 +1424,29 @@ a.return {
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
+.ta-hidden-input {
+	display: none;
+}
 .landing {
 	background: @dark-gray;
 	padding-top: 100px;
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -100px; 
 	
 	.logo {
 		margin: 0;
 		&:hover {
 			text-decoration: none;
 			cursor: auto;
+		}
+	}
+	.reg-info {
+		width: 300px;
+		margin: 0 auto;
+		.btn {
+			margin-right: 10px;
 		}
 	}
 	.landing-content {
@@ -1307,29 +1466,48 @@ a.return {
 		margin: 0 auto;
 	}
 	footer {
+		height: 100px;
 		position: static;
 		padding-bottom: 10px;
 	}
+}
+.footer, .push {
+	height: 155px; /* .push must be the same height as .footer */
 }
 .text-angular {
 	position: relative;
 		z-index: 5;
 	margin: 50px 0;
-	background: @gray;
+	border: none;
+
 	.btn-group {
 		display: inline-block;
 		margin-right: 5px;
 		clear: both;
-		overflow: hidden;
 		.btn {
 			margin: 0;
-			padding: 8px 15px;
-			float: left;
-			border-radius: 0;
 			background: none;
-			border-right: 1px solid #ccc;
+			border: 1px solid @dark-gray;
+			border-left: none;
+			border-radius: 0;
+			padding: 10px 20px;
+			display: block;
+			box-shadow: none;
+			color: @dark-gray !important;
+			transition: background .3s;
+			&:first-child {
+				border-left: 1px solid @dark-gray;
+				border-radius: 3px 0 0 3px;
+			}
+			&:last-child {
+				border-radius: 0 3px 3px 0;
+			}
 			&:hover {
-				background: #1a1a1a;
+				margin: 0 !important;
+				background: @grayd;
+			}
+			&:active {
+				
 			}
 			&.active {
 				background: @orange;
@@ -1348,15 +1526,33 @@ a.return {
 				}
 			}
 		}
+		#toolbarWC, #toolbarCC {
+			padding: 8px 20px;
+		}
+	}
+	i.fa {
+		font-size: 14px;
 	}
 	.ta-scroll-window {
 		div[id] {
-			.input;
+			padding: 0 10px;
 			width: 100%;
 			overflow-y: auto;
-			height: 500px;
+			min-height: 500px;
+			max-height: 1000px;
 			margin-top: 15px;
 			color: @dark-gray;
+			background: #dedddc;
+			transition: all .2s;
+			border: 1px solid #dedddc;
+			&:hover {
+				background: #d9d8d7;
+			}	
+			&:focus {
+				background: #e0dfde;
+				outline: none;
+				border: 1px solid @grayd;
+			}	
 		}
 	}
 }

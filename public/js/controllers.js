@@ -112,5 +112,34 @@ angular.module('Controllers', ['ngResource'])
                 $scope.error = 'Failed to register';
             })
         };
-}])
+    }])
+    .controller('AddLessonCtrl', ['$scope', '$http', '$resource', '$location', '$localStorage', '$sessionStorage', 'Main', 'keyboardManager', '$route',
+        function($scope, $http, $resource, $location, $localStorage, $sessionStorage, Main, keyboardManager, $route) {
+        
+        $scope.addLesson = function() {
+            var formData = {
+                title: $scope.title,
+                category: $scope.category,
+                content: $scope.content,
+                grade: $scope.grade,
+                author: $scope.user.name
+            };
+            Main.addLesson(formData, function(res) {
+                if (res.success == false) {
+                    $scope.message = {
+                        text: res.message,
+                        status: 'error'
+                    };
+                } else {
+                    window.location = "/lessons";
+                    $scope.message = {
+                        text: res.message,
+                        status: 'success'
+                    };
+                }
+            }, function() {
+                $scope.error = 'Failed to upload';
+            })
+        };
+    }])
 ;

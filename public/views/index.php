@@ -18,18 +18,19 @@
 <body ng-app="ITFox" ng-controller="MainController" ng-cloak>
 
 <div class="allwrapper landing" ng-if="!auth()" ng-cloak>
+
     <header>
         <a class="logo">ITFox</a>
     </header>
     <div class="landing-content" ng-view></div>
-
+    <div class="push"></div>
+</div>
     <footer>
         <a href="/">ITFox</a> 2016 <br />
         Всички права запазени  <br />
         Християн Япраков • Николай Колибаров • Даниел Лидиянов<br />
         <a href="http://www.weband.bg" target="_blank">www.weband.bg</a>
     </footer>
-</div>
 
 <div class="allwrapper" ng-if="auth()"  ng-cloak>
 	<div class="side-bar">
